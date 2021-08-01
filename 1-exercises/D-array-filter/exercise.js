@@ -8,13 +8,9 @@
 
 var pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, "whoops"];
 
-function isPair(pair) {
-  //console.log(typeof pair === typeof pairsByIndexRaw);
-  return typeof pair === [];
+function isPair(pair, index) {
+  return Array.isArray(pair) && index > 0;
 }
-
-//isPair();
-//console.log(isPair());
 
 let pairsByIndex = pairsByIndexRaw.filter(isPair); // Complete this statement
 //console.log(pairsByIndex);

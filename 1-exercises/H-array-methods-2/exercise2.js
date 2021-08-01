@@ -8,22 +8,9 @@
 */
 
 function capitalise(str) {
-
-let formatStr = str.split(" ");
-formatStr = formatStr.charAt(0).toUpperCase() + formatStr.slice(1, formatStr.length);
-
-// let formatStr = str.split(" ");
- console.log("SPLIT: " + formatStr);
-// console.log(typeof formatStr);
-
-// formatStr = formatStr[0].toUpperCase() + formatStr.splice(1, formatStr.length); 
-// console.log("upper: " + formatStr);
-// console.log(typeof formatStr);
-
-// formatStr = formatStr.join("");
-// console.log("joined: " + formatStr);
-// console.log(typeof formatStr);
-
+  let formatStr = str.split("");
+  formatStr[0] = formatStr[0].toUpperCase();
+  return formatStr.join("");
 }
 
 /* 

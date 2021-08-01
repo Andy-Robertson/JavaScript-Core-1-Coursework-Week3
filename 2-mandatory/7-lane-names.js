@@ -6,7 +6,14 @@
   HINT: string and array methods that could be helpful (indexOf, filter)
 */
 
-function getLanes() {}
+// Got this working using includes() also but went with the hint
+function getLanes(streetNames) {
+  let namesWithLane = streetNames.filter((streetName) => {
+    return streetName.indexOf("Lane") > 0;
+  });
+
+  return namesWithLane;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

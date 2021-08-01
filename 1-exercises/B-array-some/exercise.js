@@ -20,10 +20,13 @@ function isNull(pair) {
 }
 let containsNull = pairsByIndex.some(isNull);
 
-// I tested with and without a null although I'm unsure if this is the approach required.
+console.log(containsNull);
+
+// Hopefully this is the correct approach
+import { exit } from "process";
+
 if (containsNull) {
-  console.log("process.exit(1)");
-  return "process.exit(1)";
+  return exit(1);
 }
 
 var pairs = pairsByIndex.map(function (indexes) {
