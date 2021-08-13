@@ -3,13 +3,10 @@
 */
 
 var students = ["Omar", "Austine", "Dany", "Swathi", "Lesley", "Rukmini"];
-//var students = ["Austine", "Dany", "Swathi", "Daniel"];
-var group = ["Austine", "Dany", "Swathi", "Daniel"];
+var group = ["Austine", "Dany", "Swathi", "Dave"];
 
-function isStudents(group, index) {
-  // Took me a while to figure out how to compare the group with students array until I realised
-  // that .every() sends the index of the currently being processed element
-  return group === students[index];
+function isStudents(group) {
+  return students.includes(group);
 }
 
 let groupIsOnlyStudents = group.every(isStudents);

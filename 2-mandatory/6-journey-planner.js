@@ -70,7 +70,6 @@ function checkCodeIsThere(stringText) {
   Hint: Use the corresponding array method to split the array.
 */
 function getTransportModes(arr) {
-  //console.log("transport Modes: " + arr)
   let transportModes = arr.filter((arrString) => {
     if (
       arrString.includes("tube") ||
@@ -80,7 +79,6 @@ function getTransportModes(arr) {
       return arrString;
     }
   });
-  // console.log("Transport modes only: " + transportModes);
   return transportModes;
 }
 
