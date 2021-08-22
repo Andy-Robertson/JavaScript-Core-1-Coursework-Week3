@@ -43,28 +43,25 @@ Write a function that:
 - Returns a new array containing the same elements, but without the element at the passed index.
 */
 
-// I left this function here as I think it does what was asked but failed the "deep equality" test
-// Is this because the test is looking for a certain method to be used?
+function remove(arr, index) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] !== arr[index]) {
+      newArr.push(arr[i]);
+    }
+  }
+  return newArr;
+}
 
-// function remove(arr, index) {
-//   let newArr = [];
-//   for (let i = 0; i < i.length; i++) {
-//     if (arr[i] !== arr[index]) {
-//       newArr.push(arr[i]);
-//     }
-//   }
-//   return newArr;
-// }
-
-// The test seems to pass using slice() and concat() however.
+// Alternative solution one using slice() and concat().
 // function remove(arr, index) {
 //   return arr.slice(0, index).concat(arr.slice(index + 1, arr.length));
 // }
 
-// And it passed the test using slice() and the spread operator.
-function remove(arr, index) {
-  return [...arr.slice(0, index), ...arr.slice(index + 1, arr.length)];
-}
+// Alternative solution two using slice() and the spread operator.
+// function remove(arr, index) {
+//   return [...arr.slice(0, index), ...arr.slice(index + 1, arr.length)];
+// }
 
 /*
 Write a function that:
